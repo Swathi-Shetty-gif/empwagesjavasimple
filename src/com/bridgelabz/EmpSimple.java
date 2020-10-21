@@ -5,15 +5,17 @@ public class EmpSimple {
 	public static final int IS_PART_TIME=2;
 	public static final int EMP_RATE_PER_HOURS=20;
 	public static final int NUMBER_WORKING_DAYS=20;
+	public static final int MAX_HRS_IN_MONTH=10;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		
 			
-			int workingdays=20;
-			int emphrs=0,empwages=0,totalEmpwage=0;
-			for (int i=0;i<=NUMBER_WORKING_DAYS;i++)
+		
+			int emphrs=0,totalworkingdays=0,totalEmphrs=0;
+			while(totalEmphrs<MAX_HRS_IN_MONTH && totalworkingdays<NUMBER_WORKING_DAYS)
 			{
+				totalEmphrs++;
 				int random =(int) Math.floor(Math.random() * 10 ) % 3;
 			switch (random)
 			{
@@ -27,12 +29,13 @@ public class EmpSimple {
 				default:emphrs=0;//not present
 				
 			}
-			empwages=emphrs*EMP_RATE_PER_HOURS;
-			totalEmpwage +=empwages;
-			System.out.println("total empwages" + empwages);
+			
+			totalEmphrs +=emphrs;
+			System.out.println("total empwages" + emphrs);
 			
 	}
-			System.out.println("total working days" + totalEmpwage);
+				int totalEmpWage = totalEmphrs*EMP_RATE_PER_HOURS;
+			System.out.println("total working days" + totalEmpWage);
 	}
 
 }
