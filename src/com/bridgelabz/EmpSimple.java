@@ -4,15 +4,21 @@ public class EmpSimple {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		double random = Math.floor(Math.random() * 10 ) % 2;
-			int IS_PRESENT=1;
+		double random = Math.floor(Math.random() * 10 ) % 3;
+			
+			int IS_FULL_TIME=1;
+			int IS_PART_TIME=2;
 			int emphrs=0;
 			int EMP_RATE_PER_HOURS=20;
 			int empwages=0;
-			if(random==IS_PRESENT)
+			if(random==IS_FULL_TIME)
 			{
 				emphrs=80;
 				
+			}
+			else if(random==IS_PART_TIME)
+			{
+				emphrs=40;
 			}
 			else
 			{
