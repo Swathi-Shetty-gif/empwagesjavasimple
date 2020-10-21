@@ -1,28 +1,28 @@
 package com.bridgelabz;
 
 public class EmpSimple {
+	public static final int IS_FULL_TIME=1;
+	public static final int IS_PART_TIME=2;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		double random = Math.floor(Math.random() * 10 ) % 3;
+		
+		int random =(int) Math.floor(Math.random() * 10 ) % 3;
 			
-			int IS_FULL_TIME=1;
-			int IS_PART_TIME=2;
+			
 			int emphrs=0;
 			int EMP_RATE_PER_HOURS=20;
 			int empwages=0;
-			if(random==IS_FULL_TIME)
+			switch (random)
 			{
-				emphrs=80;
+			
+				case 1:	emphrs=80;
+						break;
+			
+				case 2: emphrs=40;
+						break;
 				
-			}
-			else if(random==IS_PART_TIME)
-			{
-				emphrs=40;
-			}
-			else
-			{
-				emphrs=0;//not present
+				default:emphrs=0;//not present
 				
 			}
 			empwages=emphrs*EMP_RATE_PER_HOURS;
