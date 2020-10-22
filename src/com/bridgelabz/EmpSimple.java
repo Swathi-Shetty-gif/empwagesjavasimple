@@ -8,31 +8,29 @@ public class EmpSimple{
 	public static final int MAX_HRS_IN_MONTH=10;
 	static void  EmpPresent() {
 
-		// TODO Auto-generated method stub
-				int emphrs=0,totalworkingdays=0,totalEmphrs=0;
-					while(totalEmphrs<MAX_HRS_IN_MONTH && totalworkingdays<NUMBER_WORKING_DAYS)
-					{
-						totalEmphrs++;
-						int random =(int) Math.floor(Math.random() * 10 ) % 3;
-					switch (random)
-					{
-					
-						case 1:	emphrs=80;
-								break;
-					
-						case 2: emphrs=40;
-								break;
-						
-						default:emphrs=0;//not present
-						
-					}
-					totalEmphrs +=emphrs;
-					System.out.println("total empwages" + emphrs);	
-			}
-						int totalEmpWage = totalEmphrs*EMP_RATE_PER_HOURS;
-					System.out.println("total working days" + totalEmpWage);
-			}
+		int emphrs=0,totalworkingdays=0,totalEmphrs=0;
+		while(totalEmphrs<MAX_HRS_IN_MONTH && totalworkingdays<NUMBER_WORKING_DAYS)
+		{
+			totalEmphrs++;
+			int random =(int) Math.floor(Math.random() * 10 ) % 3;
+		switch (random)
+		{
+		
+			case 1:	emphrs=80;
+					break;
+		
+			case 2: emphrs=40;
+					break;
 			
+			default:emphrs=0;//not present
+			
+		}
+		totalEmphrs +=emphrs;
+		System.out.println("total empwages" + emphrs);	
+}
+			int totalEmpWage = totalEmphrs*EMP_RATE_PER_HOURS;
+		System.out.println("total working days" + totalEmpWage);
+}
 	
 public static void main(String[] args) {
 	EmpSimple obj1=new EmpSimple();
