@@ -36,10 +36,10 @@ public class EmpSimple {
 			workingDays++;					
 			}
 			
-			HashMap<String, Integer> cm = new HashMap<String, Integer>();
-			cm.put(company, totalWages);
-			for (String i : cm.keySet()) {
-			      System.out.println( i + " wages in month " + cm.get(i));
+			HashMap<String, Integer> map = new HashMap<String, Integer>();
+			map.put(company, totalWages);
+			for (String i : map.keySet()) {
+			      System.out.println( i + " wages in month " + map.get(i));
 		}
 		}
 	
